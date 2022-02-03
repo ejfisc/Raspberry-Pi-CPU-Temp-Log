@@ -16,5 +16,10 @@ _IP=$(hostname -I) || true
 if [ "$_IP" ]; then
   printf "My IP address is %s\n" "$_IP"
 fi
+
+# added line to automate the temp_monitor.py script to start when the raspberry pi boots up
+# because the script contains an infinite loop, you must add the & at the end to fork the 
+# process so the boot process will continue
 sudo python /home/pi/temp_monitor.py &
+
 exit 0
