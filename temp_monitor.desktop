@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Temperature Monitor
+Exec=/usr/bin/python3 /home/pi/temp_monitor.py
+

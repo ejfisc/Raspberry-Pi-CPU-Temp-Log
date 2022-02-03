@@ -1,8 +1,6 @@
 # This script is used to monitor the CPU temperature of a Raspberry Pi
 # it uses GPIO Zero to get live temperature data from the cpu and writes that data to a csv file that is created
 # matplotlib is used to visually represent the data as it comes in
-# add this line to the bottom of the crontab to automate the script so that it runs everytime the raspberry pi boots up:
-# @reboot python3 /home/pi/temp_monitor.py
 
 # import GPIO Zero module to get acccess to cpu temperature, time module for date and time, and matplotlib to graph the data
 from gpiozero import CPUTemperature
@@ -35,5 +33,5 @@ def graph(temp):
 while True:
         temp = cpu.temperature
         writeTemp(temp)
-        graph(temp)
+        graph(temp) # comment this line out if you don't want to draw the graph
         plt.pause(1)
