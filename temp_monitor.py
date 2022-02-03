@@ -18,7 +18,7 @@ y = []
 # function to write to csv file
 def writeTemp(temp):
     # create a new csv file called temp_log.csv and opens it in append mode with the name log
-    with open('home/pi/temp_log.csv', 'a') as log:
+    with open('/home/pi/temp_log.csv', 'a') as log:
         # write the current date and time plus the temperature to the csv file
         log.write('{0},{1}\n'.format(strftime('%Y-%m-%d %H:%M:%S'),str(temp)))
 
@@ -35,5 +35,5 @@ def graph(temp):
 while True:
         temp = cpu.temperature
         writeTemp(temp)
-        # graph(temp)
+        graph(temp)
         plt.pause(1)
