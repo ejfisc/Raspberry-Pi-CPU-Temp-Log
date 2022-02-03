@@ -1,6 +1,6 @@
 # Raspberry Pi CPU Temperature Monitor
 
-The purpose of this project was to monitor and visually represent the CPU temperature on a Raspberry Pi, and then automate the program
+The purpose of this project was to monitor and visually represent the CPU temperature (in Celsius) on a Raspberry Pi, and then automate the program
 to run on startup. 
 
 ### temp_monitor.py
